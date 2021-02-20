@@ -4,11 +4,13 @@ public abstract class Animal {
     private String family;
     private String habitat;
     private int weight;
+    private static int countOfAnimals = 0;
     
     public Animal(String family, String habitat, int weight) {
         this.family = family;
         this.habitat = habitat;
         this.weight = weight;
+        countOfAnimals++;
     }
 
     @Override
@@ -29,6 +31,14 @@ public abstract class Animal {
     public abstract void run(int distance);
 
     public abstract void swim(int distance);
+
+    public static int getCountOfAnimals() {
+        return countOfAnimals;
+    }
+
+    public static void setCountOfAnimals(int countOfAnimals) {
+        Animal.countOfAnimals = countOfAnimals;
+    }
 
     public String getFamily() {
         return family;

@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Cat extends Animal{
     private String name;
     private final int MAX_RUNNING_DISTANCE = 200;
-    public static int countOfCats = 0;
+    private static int countOfCats = 0;
 
 
     public Cat(String family, String habitat, int weight, String name) {
@@ -39,6 +39,14 @@ public class Cat extends Animal{
     @Override
     public void swim(int distance) {
         System.out.println("Cat can't swim");
+    }
+
+    public static int getCountOfCats() {
+        return countOfCats;
+    }
+
+    public static void setCountOfCats(int countOfCats) {
+        Cat.countOfCats = countOfCats;
     }
 
     public String getName() {
