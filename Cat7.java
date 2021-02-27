@@ -16,6 +16,7 @@ public class Cat7 {
         }
         else {
             System.out.println("Not enough food for " + name + " on the plate!");
+            satiety = false;
         }
     }
 
